@@ -1,12 +1,16 @@
+const dotenv = require('dotenv');
+dotenv.config({ path: '.env' });
+
 module.exports = {
   siteMetadata: {
     title: 'portfolio-gatsby-v3',
+    siteUrl: `https://portfoliomain81955.gatsbyjs.io`,
   },
   plugins: [
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'o5f2sdpc',
+        projectId: process.env.SANITY_ID,
         dataset: 'production',
       },
     },
