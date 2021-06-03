@@ -4,6 +4,13 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    minHeight: {
+      0: '0',
+      '1/4': '25vh',
+      '1/2': '50vh',
+      '3/4': '75vh',
+      full: '100%',
+    },
     extend: {
       screens: {
         sm: '480px',
@@ -12,11 +19,11 @@ module.exports = {
         xl: '1280px',
       },
       colors: {
-        primary: '#214ECF',
-        primary_light: '#bbd2ff',
-        secondary: '#C7FF84',
-        secondary_light: '#E5FEC7',
-        secondary_dark: '#394726',
+        primary: '#009048',
+        primary_light: '#f5edda',
+        secondary: '#2bb41a',
+        secondary_light: '#81d357',
+        secondary_dark: '#b4b274',
       },
       screens: {
         dark: { raw: '(prefers-color-scheme: dark)' },

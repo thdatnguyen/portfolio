@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-
-import ProfileImage from './ProfileImage.component';
 import Button from './Global/Button/Button.component';
+import Portrait from './Portrait.component';
 
 const Hero = () => {
   const { content } = useStaticQuery(graphql`
@@ -12,6 +11,11 @@ const Hero = () => {
         name
         work
         detail
+        profileImage {
+          asset {
+            gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+          }
+        }
         resume {
           resumeLink
         }
@@ -21,15 +25,16 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="flex flex-wrap max-w-md min-h-screen px-6 py-16 mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-5xl md:py-24 lg:py-40"
+      className="flex flex-wrap max-w-md px-6 pt-24 pb-16 mx-auto min-h-3/4 lg:min-h-screen sm:max-w-xl md:max-w-4xl lg:max-w-5xl md:py-24 lg:py-40"
     >
       <div className="flex items-center justify-center w-full md:w-1/3">
-        <ProfileImage
-          className="w-40 transition duration-500 ease-in-out transform sm:w-44 md:w-48 lg:w-64 hover:scale-110"
-          alt="Tada Nguyen 2021 version"
-        />
+        <div className="mx-auto mt-12 mb-10 overflow-hidden rounded-full w-60 h-60 lg:w-72 lg:h-72 md:mb-12">
+          <Portrait
+            image={content.profileImage.asset}
+            alt={content.name || 'Profile Image'}
+          />
+        </div>
       </div>
-
       <div className="flex items-center mt-6 md:w-2/3 md:mt-0 md:pl-3 lg:pl-6">
         <div className="flex flex-col items-center text-primary dark:text-secondary md:items-start">
           <h1 className="mb-3 text-xl text-center text-gray-800 font-body md:text-2xl lg:text-2_5xl dark:text-secondary_light">

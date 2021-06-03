@@ -22,7 +22,7 @@ function Footer() {
         LET'S CONNECT!
       </h3>
       <div className="flex justify-center py-5 mb-4">
-        <Social value="light dark cursor-pointer" />
+        <Social />
       </div>
       <p className="text-lg text-gray-800 dark:text-gray-200">
         Build with <TiHeart className="inline align-baseline" /> Đạt Nguyễn ©{' '}

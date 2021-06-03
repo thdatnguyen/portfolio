@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <HeaderLayout>
       <HeaderWrapper>
-        <nav className="mb-1 sm:mb-0">
+        <nav>
           <AnchorLink
             href="#projects"
             className="cursor-pointer hover:text-primary dark:hover:text-secondary"

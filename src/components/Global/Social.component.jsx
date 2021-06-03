@@ -1,14 +1,8 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import {
-  FaGithubAlt,
-  FaLinkedinIn,
-  FaTwitter,
-  FaFacebook,
-} from 'react-icons/fa';
+import { graphql, useStaticQuery } from 'gatsby';
 import ReactTooltip from 'react-tooltip';
-import { GatsbyImage } from 'gatsby-plugin-image';
-function Social({ value }) {
+
+function Social() {
   const {
     socials: { nodes: socials },
   } = useStaticQuery(graphql`
@@ -35,9 +29,9 @@ function Social({ value }) {
             <span
               data-tip={social.name}
               data-offset="{'top': -10}"
-              data-class="tooly"
+              data-class="tooly flex items-center justify-between"
             >
-              <a className={social.name} href={social.link}>
+              <a className="cursor-pointer light dark" href={social.link}>
                 <span className="sr-only">{social.name}</span>
                 <img
                   src={social.contactImage.asset.url}
@@ -48,27 +42,6 @@ function Social({ value }) {
             </span>
           </li>
         ))}
-        {/*
-        <li className="flex">
-          <span data-tip="Github" data-offset="{'top': -10}" data-class="tooly">
-            <a className={value} href="http://github.com/anhek">
-              <span className="sr-only">Github</span>
-              <FaGithubAlt />
-            </a>
-          </span>
-        </li>
-        <li className="flex">
-          <span
-            data-tip="Twitter"
-            data-offset="{'top': -10}"
-            data-class="tooly"
-          >
-            <a className={value} href="http://twitter.com/anhek_">
-              <span className="sr-only">Twitter</span>
-              <FaTwitter />
-            </a>
-          </span>
-        </li> */}
       </ul>
       <ReactTooltip place="bottom" effect="solid" />
     </div>

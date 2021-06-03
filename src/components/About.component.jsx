@@ -1,14 +1,9 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-// import Portrait from './portrait';
-// import Stack from './stack';
-import Integration from './Icons/Integration.icon';
-import Design from './Icons/Design.icon';
-import Development from './Icons/Development.icon';
 import Button from './Global/Button/Button.component';
 import Portrait from './Portrait.component';
 import Stack from './Stack.component';
-import { graphql, useStaticQuery } from 'gatsby';
 
 const About = () => {
   const {
@@ -37,7 +32,7 @@ const About = () => {
       id="about"
       className="flex flex-col max-w-md px-6 py-12 mx-auto sm:px-10 sp:px-10 md:px-8 sm:max-w-2xl md:max-w-3xl lg:max-w-5xl sm:py-20 md:py-24 lg:py-32"
     >
-      <div className="w-48 h-48 mx-auto mt-12 mb-10 overflow-hidden rounded-full md:w-56 md:h-56 md:mb-12">
+      <div className="w-48 h-48 mx-auto mt-12 mb-10 overflow-hidden rounded-full md:w-64 md:h-64 md:mb-12">
         <Portrait
           image={about[0].aboutImage.asset}
           alt={about[0].aboutHeading}
