@@ -1,21 +1,30 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import HeaderLayout from './HeaderLayout.component';
+import tw from 'tailwind-styled-components';
+
+const HeaderWrapper = tw.div`
+  flex
+  flex-col
+  items-center
+  justify-center
+  sm:flex-row
+`;
 
 export default function Header() {
   return (
     <HeaderLayout>
-      <div className="flex flex-col items-center justify-center sm:flex-row">
+      <HeaderWrapper>
         <nav className="mb-1 sm:mb-0">
-          {/* <AnchorLink
-            href="#work"
+          <AnchorLink
+            href="#projects"
             className="cursor-pointer hover:text-primary dark:hover:text-secondary"
           >
-            Work
-          </AnchorLink> */}
+            Projects
+          </AnchorLink>
           <AnchorLink
             href="#about"
-            className="mx-6 cursor-pointer md:mx-8 hover:text-primary dark:hover:text-secondary"
+            className="mx-6 cursor-pointer md:mx-8 hover:text-primary dark:hover:text-secondary "
           >
             About
           </AnchorLink>
@@ -26,10 +35,7 @@ export default function Header() {
             Contact
           </AnchorLink>
         </nav>
-        {/* <div>
-          <Language />
-        </div> */}
-      </div>
+      </HeaderWrapper>
     </HeaderLayout>
   );
 }

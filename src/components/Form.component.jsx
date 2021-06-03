@@ -39,7 +39,7 @@ const Form = () => {
               id="lastname"
               name="lastname"
               className={inputStyle}
-              placeholder="Kobayakawa"
+              placeholder="Nguyen"
               required
             />
           </label>

@@ -6,6 +6,11 @@
   border: 1px solid red;
 } */
 
+.gatsby-image-wrapper img[src*='base64\\,'] {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
 :root {
   --gray-800: #2d3748;
   --primary-medium: #5285ff;

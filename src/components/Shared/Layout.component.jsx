@@ -6,10 +6,12 @@ import Footer from './Footer.component';
 
 import '../../styles/global.css';
 import Header from './Header.component';
+// import { GlobalStyles } from 'twin.macro';
 
 function Layout({ children }) {
   return (
     <div className="mx-auto bg-white dark:bg-gray-900">
+      {/* <GlobalStyles /> */}
       <Header siteTitle="Porfolio - Nguyễn Thành Đạt" />
       <main role="main">{children}</main>
       <Footer />

@@ -5,6 +5,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '992px',
+        xl: '1280px',
+      },
       colors: {
         primary: '#214ECF',
         primary_light: '#bbd2ff',

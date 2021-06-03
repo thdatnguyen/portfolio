@@ -2,6 +2,7 @@ import React from 'react';
 import Contact from '../components/Contact.component';
 import Hero from '../components/Hero.component';
 import About from '../components/About.component';
+import Projects from '../components/Projects.component';
 // import { useStaticQuery, graphql } from 'gatsby';
 // import { useIntl } from 'gatsby-plugin-intl';
 // import { injectIntl, Link, FormattedMessage } from 'gatsby-plugin-intl';
@@ -14,6 +15,9 @@ const IndexPage = () => {
     <>
       <div className="bg-white dark:bg-gray-900">
         <Hero />
+      </div>
+      <div className={baseClass}>
+        <Projects />
       </div>
       <div className={baseClass}>
         <About />

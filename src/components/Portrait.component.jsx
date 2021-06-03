@@ -1,8 +1,6 @@
 import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-import { StaticImage } from 'gatsby-plugin-image';
-const Portrait = () => {
-  return <StaticImage src="../images/profile.jpeg" alt="Nguyễn Thành Đạt" />;
-};
-
-export default Portrait;
+export default function Portrait({ image, alt }) {
+  return <GatsbyImage image={image.gatsbyImageData} alt={alt} />;
+}
