@@ -3,8 +3,11 @@ dotenv.config({ path: '.env' });
 
 module.exports = {
   siteMetadata: {
-    title: 'portfolio-gatsby-v3',
-    siteUrl: `https://portfoliomain81955.gatsbyjs.io`,
+    title: 'Portfolio - Đạt Nguyễn',
+    siteUrl: `https://www.tada247.xyz`,
+    description:
+      'I develop responsive, optimized and efficient websites. Currently available for freelance opportunities.',
+    image: '/tadathumbnail.png',
   },
   plugins: [
     {
