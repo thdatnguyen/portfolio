@@ -1,11 +1,11 @@
 import React from 'react';
-import SEO from '../components/Shared/Seo.component';
+import Seo from '../components/Shared/Seo.component';
 import { Link } from 'gatsby';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const NotFoundPage = () => (
   <>
-    <SEO title="Page 404" />
+    <Seo title="Page 404" />
     <div className="flex flex-col max-w-md px-12 py-20 mx-auto text-gray-900 dark:text-white md:px-32 sm:max-w-xl md:max-w-4xl">
       <div className="max-w-md p-4 mx-auto text-center bg-gray-300 rounded-lg dark:bg-white dark:text-gray-800 sm:p-6">
         <h1 className="text-3xl font-bold md:text-3xl lg:text-4xl">
